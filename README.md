@@ -7,13 +7,14 @@
 ### Rotate And Movement
 
 ****
-Mijn Rotation script is nogsteeds een beetje raar maar het werkt
+Mijn Rotation script werkt perfect
+
+Rotation Fixed 10-21-2024
 
 *De volgende keer zal ik iets meer research doen en er langer dan 5 minuten aan werken*
 
 #### Fixes Needed
 
-- Rotation Left
 - Player Y lock
   
 ****
