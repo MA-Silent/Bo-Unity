@@ -16,7 +16,5 @@ public class PlayerMovement : MonoBehaviour
         float zMove = Input.GetAxisRaw("Vertical");
         rb.linearVelocity = new Vector3(xMove, rb.linearVelocity.y, zMove) * Speed;
     }
-
-
 }
 
