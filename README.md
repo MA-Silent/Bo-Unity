@@ -15,6 +15,19 @@ Rotation Fixed 10-21-2024
 
 #### Fixes Needed
 
-- Player Y lock
+- Player Y position lock
   
+****
+
+### NPC & Skybox
+
+****
+NPC heeft geen random movement
+Skybox heeft geen problemen voor hoe ver ik kon zien
+
+#### Fixes Needed
+
+- Player Y Pos lock
+- Random NPC movement
+
 ****
