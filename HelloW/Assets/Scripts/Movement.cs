@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
+    private Animator _animator;
     [SerializeField] private float speed = 0.1f;
     [SerializeField] private float rotSpeed = 0.1f;
     [SerializeField] private float JumpPower = 1f;
@@ -12,19 +12,32 @@ public class Movement : MonoBehaviour
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
     }
-    
     // Update is called once per frame
     void Update()
-    {  
-        transform.position += transform.forward * Input.GetAxis("Vertical") * speed;
-        transform.Rotate(0, rotSpeed* Input.GetAxis("Horizontal"), 0);
+    {
+        
+
+        transform.position += transform.forward * Input.GetAxisRaw("Vertical") * speed * Time.deltaTime;
+
+        transform.Rotate(0, rotSpeed* Input.GetAxisRaw("Horizontal") * Time.deltaTime, 0);
         if(Input.GetButtonDown("Jump")&&isGrounded())
         {
             Rigidbody rb = GetComponent<Rigidbody>();
             rb.AddForce(new Vector3(0, 100, 0)*JumpPower);
         }
+        if (Input.GetAxisRaw("Vertical") != 0)
+        {
+            _animator.SetFloat("speed", 1);
+        }
+        else
+        {
+            _animator.SetFloat("speed", 0.1f);
+        }
         
+
+
     }
 
     bool isGrounded()
