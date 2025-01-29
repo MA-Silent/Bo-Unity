@@ -4,30 +4,6 @@
 
 ## Eerste project: WIP
 
-### Rotate And Movement
+### Collectable
 
-****
-Mijn Rotation script werkt perfect
-
-Rotation Fixed 10-21-2024
-
-*De volgende keer zal ik iets meer research doen en er langer dan 5 minuten aan werken*
-
-#### Fixes Needed
-
-- Player Y position lock
-  
-****
-
-### NPC & Skybox
-
-****
-NPC heeft geen random movement
-Skybox heeft geen problemen voor hoe ver ik kon zien
-
-#### Fixes Needed
-
-- Player Y Pos lock
-- Random NPC movement
-
-****
+It works by detecting a collsion with something that has the tag player, then deletes it self and calls a function in the player script that adds one to the int _coins and in the update of player it is calling a update of the UI with _coins as the amount of coins 
